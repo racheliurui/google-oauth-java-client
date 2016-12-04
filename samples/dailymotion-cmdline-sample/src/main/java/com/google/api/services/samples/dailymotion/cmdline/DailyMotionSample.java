@@ -32,6 +32,8 @@ import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.client.util.store.DataStoreFactory;
 import com.google.api.client.util.store.FileDataStoreFactory;
 
+import com.rachel.test.googleapi.GlobalConfig;
+
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -113,6 +115,7 @@ public class DailyMotionSample {
 
   public static void main(String[] args) {
     try {
+      GlobalConfig.getConfig("test");
       DATA_STORE_FACTORY = new FileDataStoreFactory(DATA_STORE_DIR);
       final Credential credential = authorize();
       HttpRequestFactory requestFactory =

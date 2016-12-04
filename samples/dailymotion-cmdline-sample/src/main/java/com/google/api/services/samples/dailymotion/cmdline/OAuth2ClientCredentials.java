@@ -14,6 +14,8 @@
 
 package com.google.api.services.samples.dailymotion.cmdline;
 
+import com.rachel.test.googleapi.GlobalConfig;
+
 /**
  * OAuth 2 credentials found in the <a href="http://www.dailymotion.com/profile/developer">
  * Developer Profile Page</a>.
@@ -30,13 +32,13 @@ package com.google.api.services.samples.dailymotion.cmdline;
 public class OAuth2ClientCredentials {
 
   /** Value of the "API Key". */
-  public static final String API_KEY = "Enter API Key";
+  public static final String API_KEY = GlobalConfig.getConfig("samplekey");
 
   /** Value of the "API Secret". */
-  public static final String API_SECRET = "Enter API Secret";
+  public static final String API_SECRET = GlobalConfig.getConfig("sampleValue");
 
   /** Port in the "Callback URL". */
-  public static final int PORT = 8080;
+  public static final int PORT = 8081;
 
   /** Domain name in the "Callback URL". */
   public static final String DOMAIN = "127.0.0.1";
